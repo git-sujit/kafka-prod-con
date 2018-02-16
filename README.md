@@ -1,6 +1,13 @@
 # kafka-prod-con
 Kafka producers &amp; consumers
 
+## Kafka Producer						Kafka Concumer
+	
+	Create Properties: props				Create Properties: props (bootstrap server, key/value serializer/deserializer etc)
+	KakfkaProducer<S,S>(props)				KakfkaConsumer<S,S>(props)
+	ProducerRecord<S, S>(Topic, Key, Value)	kafkaConsumer.subscribe(Topic)
+	kafkaProducer.send(produceRecord)		ConsumerRecords<String, String> consumerRecords = kafkaConsumer.poll(100);
+
 ## Docker - Kafka
 
 1. Start Kafka instance using docker image
