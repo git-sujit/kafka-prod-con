@@ -1,12 +1,22 @@
-# kafka-prod-con
+## kafka-prod-con
 Kafka producers &amp; consumers
 
-## Kafka Producer						Kafka Concumer
-	
-	Create Properties: props				Create Properties: props (bootstrap server, key/value serializer/deserializer etc)
-	KakfkaProducer<S,S>(props)				KakfkaConsumer<S,S>(props)
-	ProducerRecord<S, S>(Topic, Key, Value)	kafkaConsumer.subscribe(Topic)
-	kafkaProducer.send(produceRecord)		ConsumerRecords<String, String> consumerRecords = kafkaConsumer.poll(100);
+## Kafka Producer/Consumer Steps
+
+			KAFKA PRODUCER							KAFKA CONSUMER 			
+-------------------------------------------------------------------------------------------------------------------------
+	1. Create Properties: props					1. Create Properties: props (bootstrap server, key/value serializer/deserializer etc)
+	2. Create KafkaProducer passing props		2. Create KafkaConsumer padding props
+		- KakfkaProducer<S,S>(props)				- KakfkaConsumer<S,S>(props)
+	3. Create producerRecord for a Topic			3. Subscribe to a Topic
+		- ProducerRecord<S,S>(Topic,Key,Value)		- kafkaConsumer.subscribe(Topic)
+	4. Send message to Topic					4. Start polling the Topic
+		- kafkaProducer.send(produceRecord)			- ConsumerRecords<String, String> consumerRecords = kafkaConsumer.poll(100);
+-------------------------------------------------------------------------------------------------------------------------
+
+# Spark Streaming + Kafka Integration
+
+	- 
 
 ## Docker - Kafka
 
