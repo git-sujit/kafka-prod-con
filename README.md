@@ -6,7 +6,7 @@ Kafka producers &amp; consumers
 			KAFKA PRODUCER							KAFKA CONSUMER 			
 -------------------------------------------------------------------------------------------------------------------------
 	1. Create Properties: props					1. Create Properties: props (bootstrap server, key/value serializer/deserializer etc)
-	2. Create KafkaProducer passing props		2. Create KafkaConsumer padding props
+	2. Create KafkaProducer passing props		2. Create KafkaConsumer passing props
 		- KakfkaProducer<S,S>(props)				- KakfkaConsumer<S,S>(props)
 	3. Create producerRecord for a Topic			3. Subscribe to a Topic
 		- ProducerRecord<S,S>(Topic,Key,Value)		- kafkaConsumer.subscribe(Topic)
